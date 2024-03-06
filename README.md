@@ -10,6 +10,7 @@ Before installing the CRM application, ensure the following :
 - Java 21 is installed on your machine.
 - MySQL database is set up and running.
 - Obtain valid MySQL connection details (URL, username, password).
+- Use PostMan to testing http://localhost:8081
 
 # Installation
 
@@ -36,6 +37,12 @@ server.port=8081
 
 Replace `your_username` and `your_password` with your MySQL database credentials.
 
-Create this DataBase in MySQL Workbench or from Terminal
+Create this DataBase in MySQL Workbench or from Terminal.
 
 ![Database](https://github.com/ahmedelazab1220/CRM-RESTAPI-SpringBoot/assets/105994948/2be3574a-5716-47c2-9420-cb7b74b17732)
+
+# PostMan
+
+- you can use PostMan to test and determine any method you want (Post , Delete , Get).
+
+Thank You.
