@@ -32,7 +32,6 @@ spring.jpa.hibernate.ddl-auto=update
 # you can change this port , it's up to you
 server.port=8081
 
-
 ```
 
 Replace `your_username` and `your_password` with your MySQL database credentials.
