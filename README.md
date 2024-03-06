@@ -16,7 +16,7 @@ Before installing the CRM application, ensure the following :
 To install and run the CRM application, follow these steps :
 
 - Clone the repository from GitHub.
-- Configure the MySQL database connection details in the application.properties file:
+- Configure the MySQL database connection details in the `application.properties` file:
 
 ```
 
