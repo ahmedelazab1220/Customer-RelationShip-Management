@@ -34,7 +34,7 @@ To install and run the CRM application, follow these steps :
 
 ```
 
-Replace your_username and your_password with your MySQL database credentials.
+Replace `your_username` and `your_password` with your MySQL database credentials.
 
 Create this DataBase in MySQL Workbench or from Terminal
 
