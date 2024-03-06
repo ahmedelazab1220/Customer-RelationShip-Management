@@ -20,17 +20,18 @@ To install and run the CRM application, follow these steps :
 
 ```
 
-  # (JDBC Properties - ) connect MySQL Database System To Java
+# (JDBC Properties - ) connect MySQL Database System To Java
 
-  spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name?useSSL=false
-  spring.datasource.username=your_username
-  spring.datasource.password=your_password
-  spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-  spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL8Dialect
+spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name?useSSL=false
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update
 
-  # server port run app on it
-  # you can change this port , it's up to you
-  server.port=8081
+# server port run app on it
+# you can change this port , it's up to you
+server.port=8081
+
 
 ```
 
