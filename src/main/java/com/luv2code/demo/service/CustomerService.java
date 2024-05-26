@@ -6,12 +6,14 @@ import com.luv2code.demo.entity.Customer;
 
 public interface CustomerService {
 
-    public List<Customer> findAll();
-	
-	public Customer findById(int theId);
-	
-	public void save(Customer theCustomer);
-	
-	public void deleteById(int theId);
-	
+	List<Customer> findAll();
+
+	Customer findById(int theId);
+
+	void save(Customer theCustomer);
+
+	void deleteById(int theId);
+
+	Customer updateCustomer(int theId, Long salary);
+
 }

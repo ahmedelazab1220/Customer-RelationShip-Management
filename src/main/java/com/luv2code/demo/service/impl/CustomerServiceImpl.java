@@ -16,7 +16,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Autowired
 	private CustomerRepository customerRepository;
-	
+
 	@Override
 	public List<Customer> findAll() {
 		return customerRepository.findAll();
@@ -25,19 +25,13 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public Customer findById(int theId) {
 		Optional<Customer> result = customerRepository.findById(theId);
-		
-		// i add the next code for more secure about exception you can delete it , but i prefer
-		Customer theCustomer = null;
-		
-		if (result.isPresent()) {
-			theCustomer = result.get();
-		}
-		else {
+
+		if (result.isEmpty()) {
 			// we didn't find the Customer
 			throw new CustomerNotFoundException("Did not find Customer id - " + theId);
 		}
-		
-		return theCustomer;
+
+		return result.get();
 	}
 
 	@Override
@@ -47,7 +41,30 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public void deleteById(int theId) {
+
+		Optional<Customer> result = customerRepository.findById(theId);
+
+		if (result.isEmpty()) {
+			// we didn't find the Customer
+			throw new CustomerNotFoundException("Did not find Customer id - " + theId);
+		}
+
 		customerRepository.deleteById(theId);
+	}
+
+	@Override
+	public Customer updateCustomer(int theId, Long salary) {
+
+		Optional<Customer> result = customerRepository.findById(theId);
+
+		if (result.isEmpty()) {
+			// we didn't find the Customer
+			throw new CustomerNotFoundException("Did not find Customer id - " + theId);
+		}
+
+		result.get().setSalary(salary);
+
+		return customerRepository.save(result.get());
 	}
 
 }

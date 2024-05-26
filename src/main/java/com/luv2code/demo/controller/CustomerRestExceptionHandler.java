@@ -10,17 +10,17 @@ import com.luv2code.demo.exc.CustomerErrorResponse;
 @ControllerAdvice
 public class CustomerRestExceptionHandler {
 
-	// Exception To Handle All Errors 
+	// Exception To Handle All Errors
 	@ExceptionHandler
-	public ResponseEntity<CustomerErrorResponse> handleException(Exception exc){
-				
+	public ResponseEntity<CustomerErrorResponse> handleException(Exception exc) {
+
 		CustomerErrorResponse error = new CustomerErrorResponse();
-				
+
 		error.setStatus(HttpStatus.BAD_REQUEST.value());
 		error.setMessage(exc.getMessage());
 		error.setTimeStamp(System.currentTimeMillis());
-				
-		return new ResponseEntity<>(error , HttpStatus.BAD_REQUEST);
-			
+
+		return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+
 	}
 }
