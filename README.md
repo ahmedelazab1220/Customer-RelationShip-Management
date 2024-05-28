@@ -12,7 +12,11 @@ This project is a comprehensive solution for managing customer relationships, bu
 
 **`MySQL`**: A reliable relational database management system used for storing the application's data.
 
+**`Hibernate ORM`**: An object-relational mapping (ORM) framework for Java applications, simplifying database interactions by mapping Java objects to database tables.
+
 **`Spring DevTools`**: Enhances development experience by providing hot reloading and other useful features.
+
+**`Lombok`**: Reduces boilerplate code by providing annotations to automatically generate getters, setters, constructors, and other common methods.
 
 **`Java 21`**: The latest long-term support (LTS) version of Java, offering new features and improvements.
 
