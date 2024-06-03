@@ -115,7 +115,7 @@ MyCustomerRelationShipManagment-Project
 
    **`Request ` Post ` | http://localhost:8080/api/v1/customers`**
    
-   ```
+   ```json
     
     {
        "email" : "ahmed@gmail.com",
@@ -127,7 +127,7 @@ MyCustomerRelationShipManagment-Project
 
    **`Response`**
    
-   ```
+   ```json
 
     {
        customer added successfully
@@ -141,7 +141,7 @@ MyCustomerRelationShipManagment-Project
    
    **`Response`**
    
-   ```
+   ```json
 
     {
        "id" : 1,
